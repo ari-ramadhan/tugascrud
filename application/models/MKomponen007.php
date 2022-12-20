@@ -21,9 +21,15 @@ class MKomponen007 extends CI_Model {
 
         $this->db->insert('komponen_007', $data);
         return $this->db->affected_rows();
+        
+    }
+    
+    public function hapusDataKomponen($id) {
+        
+        $this->db->where('id_komponen', $id)->delete('komponen_007');
+        return $this->db->affected_rows();
 
     }
-
 }
 
 ?>
