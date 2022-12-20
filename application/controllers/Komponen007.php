@@ -28,7 +28,7 @@ class Komponen007 extends CI_Controller {
     }
 
     public function ubah ($id) {
-        $data['komponen'] = $this->MKomponen007->getKomponenById($id);
+        $data['data'] = $this->MKomponen007->getKomponenById($id);
         $this->load->view('header');
         $this->load->view('ubah', $data);
         $this->load->view('footer');

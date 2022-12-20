@@ -30,7 +30,7 @@ class MKomponen007 extends CI_Model {
     }
     
     public function getKomponenById($id) {
-        return $this->db->get_where('komponen_007', ['id_komponen', $id])->row_array();
+        return $this->db->get_where('komponen_007', ['id_komponen' => $id])->row_array();
     }
     
     public function ubahDataKomponen() {
