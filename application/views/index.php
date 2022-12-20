@@ -67,8 +67,8 @@ if (isset($_POST['submit'])) {
                             <td style="width: 110px;">Rp.<?php echo $kom['harga_007'] ?></td>
                             <td style="width: 80px;"><?php echo $kom['jenis_007'] ?></td>
                             <td>
-                                <a href= "<?php echo site_url() ?>index.php/komponen007/hapus/<?php echo $kom['id_komponen'] ?>" class="badge bg-danger text-decoration-none" onclick="return confirm('Yakin ingin menghapus data ini ?')">hapus </a>
-                                <a href= "<?php echo site_url() ?>index.php/komponen007/ubah/<?php echo $kom['id_komponen'] ?>" class="badge border border-dark bg-warning text-decoration-none text-dark">ubah </a>
+                                <a href="<?php echo site_url() ?>index.php/komponen007/hapus/<?php echo $kom['id_komponen'] ?>" class="badge bg-danger text-decoration-none" onclick="return confirm('Yakin ingin menghapus data ini ?')">hapus </a>
+                                <a href="<?php echo site_url() ?>index.php/komponen007/ubah/<?php echo $kom['id_komponen'] ?>" class="badge border border-dark bg-warning text-decoration-none text-dark">ubah </a>
                             </td>
                         </tr>
                         <?php endforeach; ?>
@@ -97,9 +97,13 @@ if (isset($_POST['submit'])) {
                     </div>
                     <div class="mb-3">
                         <label for="jenis" class="form-label">Jenis Komponen</label>
-                        <input type="text" class="form-control" id="jenis" name="jenis">
+                        <select class="form-select" aria-label="Default select example" name="jenis">
+                            <option selected disabled hidden >Pilih Jenis Komponen</option>
+                            <option value="HDD">HDD</option>
+                            <option value="RAM">RAM</option>
+                        </select>
                     </div>
-                    
+
                     <div class="mb-3">
                         <button type="submit" name="submit" class="btn btn-primary mt-3 "> INSERT </button>
                     </div>
