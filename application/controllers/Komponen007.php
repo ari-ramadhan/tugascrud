@@ -13,7 +13,6 @@ class Komponen007 extends CI_Controller {
         $this->load->view('header');
         $this->load->view('index', $data);
         $this->load->view('footer');
-
     }
 
 }

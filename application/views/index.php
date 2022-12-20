@@ -22,6 +22,23 @@
 </style>
 
 
+<?php 
+
+if (isset($_POST['submit'])) {
+    if ($this->MKomponen007->tambahDataKomponen() > 0) {
+        echo "
+        <script> alert('Tambah Data Berhasil!'); document.location.href = '". site_url('index.php/komponen007') ."'; </script>
+        ";
+        
+    } else {
+
+        echo "
+        <script> alert('Tambah Data Gagal!'); document.location.href = '". site_url('index.php/komponen007') ."';</script>
+        ";
+    }
+}
+?>
+
 
 <div class="row">
     <div class="col-7">
@@ -61,13 +78,34 @@
         </div>
     </div>
 
-    <!-- <div class="col-5">
+    <div class="col-5">
         <h4>Tambah Data Komponen</h4>
         <div class="card shadow">
-            <div class="card-body" style="height: 472px">
+            <div class="card-body p-4" style="height: 472px">
+                <form action="" method="post">
+                    <div class="mb-3">
+                        <label for="merk" class="form-label">Merk Komponen</label>
+                        <input type="text" class="form-control" id="merk" name="merk">
+                    </div>
+                    <div class="mb-3">
+                        <label for="kapasitas" class="form-label">Kapasitas Komponen</label>
+                        <input type="number" class="form-control" id="kapasitas" name="kapasitas">
+                    </div>
+                    <div class="mb-3">
+                        <label for="harga" class="form-label">Harga Komponen</label>
+                        <input type="number" class="form-control" id="harga" name="harga">
+                    </div>
+                    <div class="mb-3">
+                        <label for="jenis" class="form-label">Jenis Komponen</label>
+                        <input type="text" class="form-control" id="jenis" name="jenis">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <button type="submit" name="submit" class="btn btn-primary mt-3 "> INSERT </button>
+                    </div>
+                </form>
 
-                
             </div>
         </div>
-    </div> -->
+    </div>
 </div>
