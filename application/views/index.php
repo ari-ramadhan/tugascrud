@@ -68,7 +68,7 @@ if (isset($_POST['submit'])) {
                             <td style="width: 80px;"><?php echo $kom['jenis_007'] ?></td>
                             <td>
                                 <a href= "<?php echo site_url() ?>index.php/komponen007/hapus/<?php echo $kom['id_komponen'] ?>" class="badge bg-danger text-decoration-none" onclick="return confirm('Yakin ingin menghapus data ini ?')">hapus </a>
-                                <a class="badge border border-dark bg-warning text-decoration-none text-dark">ubah </a>
+                                <a href= "<?php echo site_url() ?>index.php/komponen007/ubah/<?php echo $kom['id_komponen'] ?>" class="badge border border-dark bg-warning text-decoration-none text-dark">ubah </a>
                             </td>
                         </tr>
                         <?php endforeach; ?>

@@ -25,7 +25,13 @@ class Komponen007 extends CI_Controller {
             <script> alert('Hapus Data Gagal!'); document.location.href = '". site_url('index.php/komponen007') ."'; </script>
             ";
         }
+    }
 
+    public function ubah ($id) {
+        $data['komponen'] = $this->MKomponen007->getKomponenById($id);
+        $this->load->view('header');
+        $this->load->view('ubah', $data);
+        $this->load->view('footer');
     }
 
 }
